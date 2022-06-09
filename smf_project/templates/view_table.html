@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+<div class="container">
+<div class="card">
+    <div class="card-header d-flex justify-content-between">
+       <div class="header-title">
+          <h4 class="card-title">All Files</h4>
+       </div>
+       <div class="card-header-toolbar d-flex align-items-center">
+        <a href="/view_document" style="color: white;"><button class="btn btn-primary"> <p class="m-0"> Back</p></button></a>
+       </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+        <div class="container table-responsive py-5">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">S.No</th>
+                        <th scope="col">File Name</th>
+                        <th scope="col">Upload Date</th>
+                        <th scope="col">File</th>
+                        <th scope="col">Link</th>
+                        <th scope="col">Action</th>
+                        <th scope="col">Share</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>Computer Document</td>
+                    <td>January 24, 2020</td>
+                    <td><img src="{% static 'socialv/bs5/html/dist/assets/images/page-img/07.jpg' %}" alt="gallary-image" class="img-fluid rounded" width="200",height="200"/> </td>
+                    <td><p id="p1">https://computerdoc.in/ </p></td>
+                    <td><a href="/view_table" style="color: black;"><i class="ri-delete-bin-fill"></i></a></td>
+                    <td><button class="btn btn-primary"  title="Copied" onclick="copyToClipboard('#p1')">Copy </button>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Laptop</td>
+                        <td>March 14, 2020</td>
+                        <td><img src="{% static 'socialv/bs5/html/dist/assets/images/page-img/06.jpg' %}" alt="gallary-image" class="img-fluid rounded" width="200",height="200"/> </td>
+                        <td><p id="p2">https://laptop.in/<p></td>
+                        <td><a href="/view_table" style="color: black;"><i class="ri-delete-bin-fill"></i></a></td>
+                        <td><button class="btn btn-primary"  title="Copied" onclick="copyToClipboard('#p2')">Copy </button>
+                        </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Travel Image</td>
+                        <td>April 24, 2021</td>
+                        <td><img src="{% static 'socialv/bs5/html/dist/assets/images/page-img/58.jpg' %}" alt="gallary-image" class="img-fluid rounded" width="200",height="200"/> </td>
+                        <td><p id="p3">https://travel.in/<p></td>
+                        <td><a href="/view_table"style="color: black;"><i class="ri-delete-bin-fill"></i></a></td>
+                        <td><button class="btn btn-primary"  title="Copied" onclick="copyToClipboard('#p3')">Copy </button>
+                        </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Toys</td>
+                        <td>June 24, 2020</td>
+                        <td><img src="{% static 'socialv/bs5/html/dist/assets/images/page-img/p3.jpg' %}" alt="gallary-image" class="img-fluid rounded" width="200",height="200"/> </td>
+                        <td><p id="p4">https://toys.in/<p></td>
+                        <td><a href="/view_table"style="color: black;"><i class="ri-delete-bin-fill"></i></a></td>
+                        <td><button class="btn btn-primary" title="Copied" onclick="copyToClipboard('#p4')">Copy </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+              
+        </div>
+    </div>
+ </div>
+ </div>
+ 
+ <!-- Script ForCopy Text -->
+ <script>
+     function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+ </script>
+ 
+ 
+ {% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+<div class="container">
+<div class="card">
+    <div class="card-header d-flex justify-content-between">
+       <div class="header-title">
+          <h4 class="card-title">Uploaded Files</h4>
+       </div>
+       <div class="card-header-toolbar d-flex align-items-center">
+        <a href="/view_table" style="color: white;"><button class="btn btn-primary"> <p class="m-0"> View All</p></button></a>&nbsp;
+        <a href="/document" style="color: white;"><button class="btn btn-primary"> <p class="m-0"> + Upload</p></button></a>
+       </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+        <div class="col-sm-4">
+            <div class="event-post position-relative">
+               <a href="#"><img src="{% static 'socialv/bs5/html/dist/assets/images/page-img/07.jpg' %}" alt="gallary-image" class="img-fluid rounded"></a>
+               <div class="job-icon-position">
+                  <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><a href="{% static 'socialv/bs5/html/dist/assets/images/page-img/07.jpg' %}" download><i class="ri-download-line text-white"></i></a></div>
+               </div>
+               <div class="card-body text-center p-2">
+                  <h5>Computer Document</h5>
+                  <p>January 24, 2020</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-4">
+            <div class="event-post position-relative">
+               <a href="#"><img src="{% static 'socialv/bs5/html/dist/assets/images/page-img/06.jpg' %}" alt="gallary-image" class="img-fluid rounded"></a>
+               <div class="job-icon-position">
+                  <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><a href="{% static 'socialv/bs5/html/dist/assets/images/page-img/06.jpg' %}" download><i class="ri-download-line text-white"></i></a></div>
+               </div>
+               <div class="card-body text-center p-2">
+                  <h5>Laptop</h5>
+                  <p>March 14, 2020</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-4">
+            <div class="event-post position-relative">
+               <a href="#"><img src="{% static 'socialv/bs5/html/dist/assets/images/page-img/58.jpg' %}" alt="gallary-image" class="img-fluid rounded"></a>
+               <div class="job-icon-position">
+                  <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><a href="{% static 'socialv/bs5/html/dist/assets/images/page-img/58.jpg' %}" download><i class="ri-download-line text-white"></i></a></div>
+               </div>
+               <div class="card-body text-center p-2">
+                  <h5>Travel Image</h5>
+                  <p>April 24, 2021</p>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-4">
+            <div class="event-post position-relative">
+               <a href="#"><img src="{% static 'socialv/bs5/html/dist/assets/images/page-img/p3.jpg' %}" alt="gallary-image" class="img-fluid rounded"></a>
+               <div class="job-icon-position">
+                  <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><a href="{% static 'socialv/bs5/html/dist/assets/images/page-img/p3.jpg' %}" download><i class="ri-download-line text-white"></i></a></div>
+               </div>
+               <div class="card-body text-center p-2">
+                  <h5>Toys </h5>
+                  <p>June 24, 2020</p>
+               </div>
+            </div>
+         </div>
+       </ul>
+    </div>
+ </div>
+ </div>
+ {% endblock %}
